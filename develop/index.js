@@ -58,15 +58,11 @@ function init() {
         .prompt(questions)
             .then((answers) => {
                 console.log('>> Answers >>',answers);
-                
                 generateMarkdown(answers);
-                
-                
             })
             .catch((error) => {
                 console.log('Something else went wrong.', error);
             });
-
 }
 
 // Function call to initialize app
