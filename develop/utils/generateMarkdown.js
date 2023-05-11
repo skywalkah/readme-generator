@@ -35,10 +35,10 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if ('None' === license) {
-    return `## License\n\nNone.\n\n`;
-  } else {
+  if (license !== 'None') {
     return `## License\n\nThis application is covered under the [${license}](${renderLicenseLink(license)}) license.\n\n`;
+  } else {
+    return '';
   }
 }
 
@@ -50,7 +50,7 @@ function generateMarkdown(data) {
   readme += `## Table of Contents\n\n`;
   readme += `* [Installation](#installation)\n`;
   readme += `* [Usage](#usage)\n`;
-  readme += `* [License](#license)\n`;
+  readme += data.license !== 'None' ? `* [License](#license)\n` : '';
   readme += `* [Contributing](#contributing)\n`;
   readme += `* [Tests](#tests)\n`;
   readme += `* [Questions](#questions)\n\n`;
