@@ -61,7 +61,7 @@ function generateMarkdown(data) {
   readme += `## Tests\n\n${data.test}\n\n`;
   readme += `## Questions\n\n`;
   readme += `GitHub: [${data.github}](https://github.com/${data.github})\n\n`;
-  readme += `Email: [${data.email}](mailto:${data.email})\n\n`;
+  readme += `If you need to reach me with additional questions, email me at [${data.email}](mailto:${data.email})\n\n`;
   console.log('>> README >>',readme);
   fs.writeFile('README.md', readme, (err) => 
     err
