@@ -55,7 +55,10 @@ function generateMarkdown(data) {
   readme += `* [Tests](#tests)\n`;
   readme += `* [Questions](#questions)\n\n`;
   readme += `## Installation\n\n${data.installation}\n\n`;
-  readme += `## Usage\n\n${data.usage}\n\n`;
+  readme += `## Usage\n\n`;
+  readme += '```bash\n';
+  readme += `${data.usage}\n`;
+  readme += '```\n';
   readme += renderLicenseSection(data.license);
   readme += `## Contributing\n\n${data.contribution}\n\n`;
   readme += `## Tests\n\n${data.test}\n\n`;
